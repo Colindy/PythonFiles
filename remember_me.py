@@ -1,8 +1,16 @@
 import json
 
-username = input("What is your name? ")
+def greet_user():
+    filename = 'uname.json'
+    try:
+        with open(filename) as f:
+            username = json.load(f)
+    except FileNotFoundError:
+        username = input("What's your name? ")
+        with open(filename, 'w') as f:
+            json.dump(username, f)
+            print(f"We'll remember you, {username}!")
+    else:
+        print(f"Welcome back, {username}!")
 
-filename = 'uname.json'
-with open(filename, 'w') as f:
-    json.dump(username, f)
-    print(f"We'll remember you, {username}!")
+greet_user()
