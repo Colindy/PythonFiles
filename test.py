@@ -7,7 +7,7 @@ filename = 'test.txt'
 
 with open('test.txt', 'a') as file_object:
     file_object.write("If this works, you can use 'a' to\n")
-    file_object.write("create a file as well as append.")
+    file_object.write("create a file as well as append.\n")
 
 """
 And it worked!!  So, I, at this point, think it would just be habit to always
