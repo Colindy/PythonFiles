@@ -2,7 +2,7 @@ import json
 
 def get_stored_username():
     """Get stored username if available."""
-    filename = 'uname.json'
+    filename = 'uname1.json'
     try:
         with open(filename) as f:
             username = json.load(f)
@@ -14,7 +14,7 @@ def get_stored_username():
 def get_new_username():
     """Prompt for a new username."""
     username = input("What is your name? ")
-    filename = 'uname.json'
+    filename = 'uname1.json'
     with open(filename, 'w') as f:
         json.dump(username, f)
     return username
