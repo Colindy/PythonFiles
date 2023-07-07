@@ -39,3 +39,9 @@ def greet_user():
         print(f"We'll remember you, {username}!")
 
 greet_user()
+
+"""
+Had some fun with this one.  Took a sec to get the check right but was able to do it
+finally.  Tested with removing the file, entering 'yes', 'no', and some random keyboard
+smashes.  Was finally able make sure all the output was correct.  Fun stuff!
+"""
