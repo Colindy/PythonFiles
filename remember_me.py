@@ -20,10 +20,20 @@ def get_new_username():
     return username
 
 def greet_user():
-    """Greet user by name."""
+    """Greet user by name after verifying the username is correct."""
     username = get_stored_username()
     if username:
-        print(f"Welcome back, {username}!")
+        user = input(f"Are you {username}? Yes or No? ")
+        if user.lower() == "no":
+            username = get_new_username()
+            print(f"We'll remember you, {username}!")
+            return
+        if user.lower() == "yes":
+            print(f"Welcome back, {username}!")
+            return
+        else:
+            print("Need either 'Yes' or 'No' here.")
+            greet_user()
     else:
         username = get_new_username()
         print(f"We'll remember you, {username}!")
